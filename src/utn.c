@@ -32,7 +32,7 @@ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo
 	return retorno;
 }
 
-
+/*
 int utn_getCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos){
 
 	int retorno = -1;
@@ -41,3 +41,6 @@ int utn_getCaracter(char* pResultado, char* mensaje, char* mensajeError, char mi
 
 	return retorno;
 }
+ */
+
+

@@ -10,8 +10,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "utn.h"
 
 int main(void) {
-	puts(""); /* prints  */
+	int opcion;
+	int respuesta;
+	do{
+
+		respuesta = utn_getNumero(&opcion, "Seleccione una opción:\n1-Leer\n2-Mostrar\n3-Salir\n,""No es una opción\n", 1,3,2);
+			if(!respuesta){
+				switch(opcion){
+				case 1:
+					printf("Entre al caso 1\n");
+					break;
+				case 2:
+					printf("Entre al caso 2\n");
+					break;
+				}
+			}
+	}while(opcion != 3);
+
 	return EXIT_SUCCESS;
 }
