@@ -13,22 +13,36 @@
 #include "utn.h"
 
 int main(void) {
-	int opcion;
-	int respuesta;
+	setbuf (stdout,NULL);
+
+	int option;
+	int reply;
+	int numberA;
+	int numberB;
+	int sumResult;
+	int subtractionResult;
+	int multiplicationResult;
+	int divisionResult;
+	int verifyDivision;
+	int factorials;
+
+
 	do{
 
-		respuesta = utn_getNumero(&opcion, "Seleccione una opción:\n1-Leer\n2-Mostrar\n3-Salir\n,""No es una opción\n", 1,3,2);
-			if(!respuesta){
-				switch(opcion){
-				case 1:
-					printf("Entre al caso 1\n");
-					break;
-				case 2:
-					printf("Entre al caso 2\n");
-					break;
-				}
-			}
-	}while(opcion != 3);
+		printf("*****Calculadora*****");
+		printf("\nIngrese un numero");
+//		reply = utn_getNumero(&option, "Seleccione una opción:\n1-Leer\n2-Mostrar\n3-Salir\n,""No es una opción\n", 1,3,2);
+//			if(!reply){
+//				switch(option){
+//				case 1:
+//					printf("Entre al caso 1\n");
+//					break;
+//				case 2:
+//					printf("Entre al caso 2\n");
+//					break;
+//				}
+//			}
+	}while(option == "si");
 
 	return EXIT_SUCCESS;
 }

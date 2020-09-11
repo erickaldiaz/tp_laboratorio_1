@@ -7,40 +7,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos){
+int utn_getNumber(int* pResult, char* message, char* errorMessage, int minimum, int maximum, int retry){
 
 	int bufferInt;
 	int retorno = -1;
 	int contadorIntentos = 0;
 
-	if(pResultado != NULL && mensaje != NULL && mensajeError !=NULL && minimo <= maximo && reintentos >= 0)
+	if(pResult != NULL && message != NULL && errorMessage !=NULL && minimum <= maximum && retry >= 0)
 	{
 		do{
-			printf("%s", mensaje);
+			printf("%s", message);
 				scanf("%d", &bufferInt);
-				if(bufferInt >= minimo && bufferInt <= maximo){
-					*pResultado = bufferInt;
+				if(bufferInt >= minimum && bufferInt <= maximum){
+					*pResult = bufferInt;
 					retorno = 0;
 					break;
 				}else{
-					printf("%s", mensajeError);
-					reintentos--;
+					printf("%s", ErrorMessage);
+					retry--;
 				}
 
-		}while(reintentos > 0);
+		}while(retry > 0);
 	}
 	return retorno;
 }
-
-/*
-int utn_getCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos){
-
-	int retorno = -1;
-	char bufferChar;
-	if(pResultado != NULL && mensaje)
-
-	return retorno;
-}
- */
-
 
