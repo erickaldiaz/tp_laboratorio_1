@@ -75,7 +75,7 @@ int addEmployee(Employee* list, int len, int indice, int* id)
 		if(	utn_getName(bufferEmpleado.name,NAME_LEN,"\nNombre del empleado?\n","\nERROR\n",2) == 0 &&
 			utn_getName(bufferEmpleado.lastName,LAST_NAME_LEN,"\nApellido del empleado?\n","\nERROR\n",2) == 0 &&
 			utn_getNumberFloat(&bufferEmpleado.salary,"\nSalario del empleado?\n","\nERROR\n",0,100000,2) == 0 &&
-			utn_getNumber(&bufferEmpleado.sector,"\nEn que sector se encuentra?\n\n1-RRHH\n2-DISEÑO\n3-TECNOLOGÍA","\nERROR\n",0,3,2) == 0)
+			utn_getNumber(&bufferEmpleado.sector,"\nEn que sector se encuentra?\n\n1-RRHH\n2-DISEÑO\n3-TECNOLOGÍA","\nERROR\n",1,3,2) == 0)
 		{
 			reply = 0;
 			bufferEmpleado.id = *id;
